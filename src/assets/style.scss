@@ -1,0 +1,126 @@
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s, color 0.3s;
+  
+   
+  }
+  
+  .dark-mode {
+    background-color: #333;
+    color: #fff;
+
+  }
+  
+  .light-mode {
+    background-color: #f4f4f4;
+    color: #333;
+  }
+   
+  .dark-mode, .light-mode {
+    height: 100vh !important;
+  }
+  
+  .app-title {
+        padding-left: 20px !important;
+  }
+
+  h1 {
+    margin-top:0;
+    padding-top: 20px;
+    // text-align: center;
+    color: #4CAF50; /* Primary color */
+  }
+  
+  .container {
+    display: flex;
+    margin-top: 20px;
+  }
+  
+  .nav {
+    width: 200px;
+    // background-color: #f8f8f8;
+    border-right: 2px solid #4CAF50;
+    padding: 10px;
+    transition: background-color 0.3s;
+  
+    &.dark-mode {
+      background-color: #444;
+    }
+  
+    ul {
+      list-style: none;
+      padding: 0;
+  
+      li {
+        margin: 10px 0;
+        cursor: pointer;
+        padding: 10px;
+        border-radius: 4px;
+        transition: background-color 0.2s;
+  
+        &:hover {
+          background-color: #4CAF50;
+          color: #fff;
+        }
+        &:last-child:hover {
+            background-color: transparent
+          }
+  
+        &[disabled] {
+          cursor: not-allowed;
+          opacity: 0.5;
+        }
+      }
+    }
+  }
+  
+  .content {
+    flex: 1;
+    padding: 30px;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    // background-color: #fff;
+    transition: background-color 0.3s;
+    max-height: 80vh;
+    overflow-y: auto;
+
+  
+    &.dark-mode {
+      background-color: #555;
+    }
+  }
+  
+  button {
+    margin-top: 20px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  
+    &:hover {
+      background-color: darken(#4CAF50, 10%);
+    }
+  
+    &.dark-mode {
+      background-color: #666;
+  
+      &:hover {
+        background-color: lighten(#666, 10%);
+       
+      }
+     
+
+    }
+  }
+  
+
+  .is-disabled {
+    pointer-events:none !important;  //This makes it not clickable
+    opacity:0.3 !important;         //This grays it out to look disabled
+}
