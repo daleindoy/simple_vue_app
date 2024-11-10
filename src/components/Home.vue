@@ -12,7 +12,7 @@ import { useAppStore } from "@/store/appStore";
 const appStore = useAppStore();
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 .home-container {
   padding: 20px;
   /* background-color: #f9f9f9; */
